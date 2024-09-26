@@ -507,8 +507,8 @@
                     <input type="email" id="email" name="email">
                 </div>
                  <div class="form-group">
-                    <label for="email">Phone No.:</label>
-                    <input type="number" id="email" name="email">
+                    <label for="phone">Phone No.:</label>
+                    <input type="number" id="phone" name="phone">
                 </div>
                 <div class="form-group">
                     <label for="gender">Gender:</label>
@@ -584,6 +584,7 @@
             var startupName = document.getElementById('startupName').value;
             var fullName = document.getElementById('fullName').value;
             var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
             var gender = document.getElementById('gender').value;
             var country = document.getElementById('country').value;
             var profession = document.getElementById('profession').value;
@@ -600,6 +601,10 @@
             }
             if (!email) {
                 alert('Email is required');
+                return false;
+            }
+             if (!phone) {
+                alert('phone no. is required');
                 return false;
             }
             if (!gender) {
